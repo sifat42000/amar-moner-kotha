@@ -38,7 +38,7 @@ const Reasons: React.FC = () => {
           <GlassCard className="max-w-2xl mx-auto p-8 md:p-12 border-accent-gold/20 shadow-2xl">
             <h3 className="text-xl md:text-2xl font-serif text-accent-gold mb-4 md:mb-6">সব কারণের শেষে…</h3>
             <p className="text-white/70 italic mb-8 md:mb-10 leading-relaxed text-sm md:text-base">
-              শেষ পর্যন্ত বুঝলাম, তোমাকে special মনে হওয়ার কারণগুলো আলাদা আলাদা নয় — সবকিছু একসাথে মিলে তুমি আমার কাছে একটা সুন্দর অনুভূতি।
+              শেষ পর্যন্ত বুঝলাম, তোমাকে special মনে হওয়ার কারণগুলো আলাদা আলাদা নয়, সবকিছু একসাথে মিলে তুমি আমার কাছে একটা সুন্দর অনুভূতি।
             </p>
             <GlowButton onClick={() => navigate('/future')} className="w-full sm:w-auto">
               ভবিষ্যতের কথা ভাবি <ArrowRight className="ml-2 w-4 h-4" />

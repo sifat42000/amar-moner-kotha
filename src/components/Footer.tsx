@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
       <p className="text-sm font-light italic">
         Made with a little courage & a lot of feelings.
       </p>
-      <p className="text-xs">© 2026 Amar Moner Kotha</p>
+      <p className="text-xs">“ Amar Moner Kotha — Created with love by Rashiquzzaman Sifat”</p>
     </footer>
   );
 };
