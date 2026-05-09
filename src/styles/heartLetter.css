@@ -1,0 +1,87 @@
+.envelope-wrapper {
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  position: relative;
+}
+
+.envelope {
+  position: relative;
+  width: 320px;
+  height: 220px;
+  background: #1a1b3a;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  border-top: 110px solid #2a2b4a;
+  transform-origin: top;
+  z-index: 3;
+  transition: transform 0.6s ease;
+}
+
+.envelope.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.letter-paper {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 300px;
+  background: #fdfaf0;
+  padding: 40px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 2;
+  transition: all 0.8s ease;
+  min-height: 200px;
+}
+
+.envelope.open .letter-paper {
+  transform: translateY(-250px);
+  width: 100%;
+  max-width: 600px;
+  left: 50%;
+  margin-left: -300px; /* Centering for desktop, will fix in component for mobile */
+  height: auto;
+}
+
+.wax-seal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #8b0000 0%, #4a0000 100%);
+  border-radius: 50%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.envelope.open .wax-seal {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .envelope.open .letter-paper {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+}

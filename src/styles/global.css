@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@reference "tailwindcss";
+
+@theme {
+  --color-primary: #050614; /* Midnight */
+  --color-accent-gold: #D4AF37; /* Gold Text/Glow */
+  --color-accent-pink: rgba(255, 105, 180, 0.4); /* Pink Glow */
+  --color-accent-lavender: #E6E6FA; /* Lavender */
+  
+  --font-serif: "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-primary text-white font-sans selection:bg-accent-gold/30 antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+}
+
+.glow-btn {
+  @apply border border-accent-gold text-accent-gold px-8 py-3 rounded-full transition-all duration-500 hover:bg-accent-gold hover:text-primary;
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}

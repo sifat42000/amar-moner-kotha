@@ -1,0 +1,67 @@
+.flower-garden-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.flower-card {
+  height: 280px;
+}
+
+.flower-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.flower-card.unlocked {
+  border-color: var(--color-accent-gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.flower-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  transition-property: transform;
+  transition-duration: 700ms;
+}
+
+.flower-card:hover .flower-icon {
+  transform: scale(1.25) rotate(6deg);
+}
+
+.flower-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.flower-modal {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+
+.petal-particle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 0.8rem;
+  opacity: 0.2;
+  animation: float-petal var(--duration) linear infinite;
+}
+
+@keyframes float-petal {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.3; }
+  90% { opacity: 0.3; }
+  100% { transform: translate(var(--x), 100vh) rotate(360deg); opacity: 0; }
+}
+
+.final-reveal-card {
+  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.1), transparent);
+}
