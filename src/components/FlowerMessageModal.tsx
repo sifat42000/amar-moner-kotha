@@ -21,18 +21,18 @@ export const FlowerMessageModal: React.FC<FlowerMessageModalProps> = ({ flower, 
         initial={{ opacity: 0, scale: 0.9, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="flower-modal glass max-w-lg w-full p-12 rounded-3xl border border-accent-gold/30 text-center relative"
+        className="flower-modal glass max-w-lg w-full p-6 md:p-12 rounded-3xl border border-accent-gold/30 text-center relative max-h-[80vh] overflow-y-auto"
         onClick={e => e.stopPropagation()}
       >
         <button onClick={onClose} className="absolute top-6 right-6 text-white/30 hover:text-white/70 transition-colors">
           <X className="w-6 h-6" />
         </button>
 
-        <div className="text-6xl mb-8">{flower.icon}</div>
-        <h3 className="text-2xl font-serif text-accent-gold mb-6">{flower.name}</h3>
+        <div className="text-4xl md:text-6xl mb-8">{flower.icon}</div>
+        <h3 className="text-xl md:text-2xl font-serif text-accent-gold mb-4 md:mb-6">{flower.name}</h3>
         
-        <div className="p-8 border-y border-white/5 mb-10">
-          <p className="text-xl text-white/80 leading-relaxed italic font-light">
+        <div className="p-4 md:p-8 border-y border-white/5 mb-6 md:mb-10">
+          <p className="text-lg md:text-xl text-white/80 leading-relaxed italic font-light">
             "{flower.message}"
           </p>
         </div>
