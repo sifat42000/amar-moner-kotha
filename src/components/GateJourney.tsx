@@ -86,9 +86,7 @@ export const GateJourney: React.FC = () => {
            <motion.div 
              animate={{ scale: [1, 1.2, 1] }} 
              transition={{ repeat: Infinity, duration: 2 }}
-           >
-             ✨
-           </motion.div>
+           />
         </div>
         <SectionHeading 
           title="সব দরজা খুলে গেছে..." 

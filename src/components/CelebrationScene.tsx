@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, RefreshCw, Home, Mail } from 'lucide-react';
+import { RefreshCw, Home, Mail } from 'lucide-react';
 import { proposalData } from '../data/proposalData';
 import { GlowButton } from './GlowButton';
 import { useNavigate } from 'react-router-dom';
@@ -26,13 +26,6 @@ export const CelebrationScene: React.FC<CelebrationSceneProps> = ({ onReset }) =
         transition={{ delay: 0.5 }}
         className="text-center space-y-8 max-w-3xl mx-auto relative z-10"
       >
-         <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-20 left-1/2 -translate-x-1/2 opacity-20"
-        >
-          <Sparkles className="w-40 h-40 text-accent-gold" />
-        </motion.div>
 
         <h2 className="text-4xl md:text-5xl font-serif text-accent-gold glow-text">
           {celebrationContent.title}

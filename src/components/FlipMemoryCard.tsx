@@ -24,9 +24,7 @@ export const FlipMemoryCard: React.FC<FlipMemoryCardProps> = ({ title, frontLine
     >
       <div className="flip-card-inner">
         <div className="flip-card-front space-y-4">
-          <div className="w-12 h-12 rounded-full bg-accent-gold/10 flex items-center justify-center">
-            <span className="text-xl">✨</span>
-          </div>
+          <div className="w-12 h-12 rounded-full bg-accent-gold/10 flex items-center justify-center" />
           <h3 className="text-xl font-serif text-accent-gold">{title}</h3>
           <p className="text-xs uppercase tracking-[2px] text-white/40 italic">{frontLine}</p>
         </div>

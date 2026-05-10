@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, ArrowRight, RefreshCw } from 'lucide-react';
+import { ArrowRight, RefreshCw } from 'lucide-react';
 import { flowerData } from '../data/flowerData';
 import { FlowerCard } from './FlowerCard';
 import { FlowerMessageModal } from './FlowerMessageModal';
@@ -89,7 +89,6 @@ export const FlowerGarden: React.FC = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             className="final-reveal-card glass z-20 w-full max-w-3xl p-16 border border-accent-gold mt-20 relative overflow-visible text-center"
           >
-            <Sparkles className="absolute -top-12 left-1/2 -translate-x-1/2 text-accent-gold w-24 h-24 opacity-30 animate-pulse" />
             <h2 className="text-4xl md:text-5xl font-serif text-accent-gold glow-text mb-8">
               {flowerData.finalReveal.title}
             </h2>

@@ -36,7 +36,7 @@ export const futureData = {
     {
       id: 5,
       title: "তোমার স্বপ্নের পাশে",
-      icon: "✨",
+      icon: "🤍",
       text: "তোমার নিজের স্বপ্ন, নিজের growth, নিজের happiness এগুলোর পাশে আমি একজন supportive মানুষ হয়ে থাকতে চাই।",
       whisper: "Your dreams should never feel alone."
     },

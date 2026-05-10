@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { siteContent } from '../data/siteContent';
 import { GlowButton } from '../components/GlowButton';
 import { PageTransition } from '../components/PageTransition';

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles } from 'lucide-react';
 import { proposalData } from '../data/proposalData';
 import { GlowButton } from './GlowButton';
 import { cn } from '../lib/utils';
@@ -82,9 +81,7 @@ export const FinalGate: React.FC<FinalGateProps> = ({ isOpen, onOpen, onContinue
             <GlowButton 
               onClick={onOpen}
               className="w-20 h-20 rounded-full flex items-center justify-center p-0"
-            >
-              <Sparkles className="w-10 h-10 text-primary" />
-            </GlowButton>
+            />
             <span className="text-accent-gold/60 text-[10px] uppercase tracking-[4px]">
               Tap to unveil
             </span>

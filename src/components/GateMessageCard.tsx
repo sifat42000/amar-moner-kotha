@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { GateMessage } from '../data/gateMessages';
 import { GlowButton } from './GlowButton';
 import { GlassCard } from './GlassCard';
@@ -22,7 +22,6 @@ export const GateMessageCard: React.FC<GateMessageCardProps> = ({ gate, onNext, 
     >
       <GlassCard className="text-center p-10 border-accent-gold/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
         <div className="relative mb-8">
-           <Sparkles className="absolute -top-4 -right-4 text-accent-gold/30 w-8 h-8 animate-pulse" />
            <h3 className="text-3xl font-serif text-accent-gold glow-text">{gate.title}</h3>
         </div>
 

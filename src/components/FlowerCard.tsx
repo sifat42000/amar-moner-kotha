@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 interface FlowerCardProps {
@@ -36,9 +36,6 @@ export const FlowerCard: React.FC<FlowerCardProps> = ({ flower, isUnlocked, onCl
         </motion.div>
       )}
 
-      {isUnlocked && (
-        <Sparkles className="absolute bottom-4 right-4 text-accent-gold/20 w-8 h-8 animate-pulse" />
-      )}
     </motion.div>
   );
 };

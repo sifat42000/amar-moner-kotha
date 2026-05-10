@@ -38,10 +38,7 @@ export const ProposalQuestion: React.FC<ProposalQuestionProps> = ({ onAccept, on
       </div>
 
       <GlassCard className="p-10 md:p-16 border-accent-gold/20 text-center space-y-10 w-full shadow-2xl relative overflow-visible">
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary border border-accent-gold rounded-full flex items-center justify-center">
-          <span className="text-accent-gold">✨</span>
-        </div>
-
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary border border-accent-gold rounded-full" />
         <p className="text-xl md:text-3xl text-white/90 font-light leading-relaxed max-w-2xl mx-auto">
           "{proposalQuestion.banglaLine}"
         </p>
@@ -53,7 +50,7 @@ export const ProposalQuestion: React.FC<ProposalQuestionProps> = ({ onAccept, on
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 pt-6">
           <GlowButton 
             onClick={onAccept}
-            className="px-20 py-8 text-2xl bg-accent-gold text-primary font-bold w-full md:w-auto min-w-[280px]"
+            className="px-20 py-8 bg-accent-gold text-black font-bold w-full md:w-auto min-w-[280px]"
           >
             {proposalQuestion.yesButton}
           </GlowButton>
