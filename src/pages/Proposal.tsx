@@ -9,6 +9,7 @@ import { CelebrationScene } from '../components/CelebrationScene';
 import { RespectfulResponse } from '../components/RespectfulResponse';
 import { FinalMemoryNote } from '../components/FinalMemoryNote';
 import { GlowButton } from '../components/GlowButton';
+import { useScrollToTopOnChange } from '../lib/useScrollToTopOnChange';
 import '../styles/proposal.css';
 
 type ProposalState = 'intro' | 'gateOpened' | 'question' | 'yes' | 'think';
@@ -29,6 +30,8 @@ const Proposal: React.FC = () => {
   const handleGateOpen = () => setStep('gateOpened');
   const handleShowQuestion = () => setStep('question');
   
+  useScrollToTopOnChange([step], 'smooth');
+
   const handleAccept = () => {
     setStep('yes');
     localStorage.setItem('proposalAnswer', 'yes');

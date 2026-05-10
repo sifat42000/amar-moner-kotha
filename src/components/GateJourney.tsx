@@ -8,6 +8,7 @@ import { MagicalGate } from './MagicalGate';
 import { GateMessageCard } from './GateMessageCard';
 import { GlowButton } from './GlowButton';
 import { SectionHeading } from './SectionHeading';
+import { useScrollToTopOnChange } from '../lib/useScrollToTopOnChange';
 
 export const GateJourney: React.FC = () => {
   const navigate = useNavigate();
@@ -50,6 +51,8 @@ export const GateJourney: React.FC = () => {
   };
 
   const currentGate = gateMessages[currentIndex];
+
+  useScrollToTopOnChange([currentIndex, isOpen, showIntro, isJourneyComplete], 'smooth');
 
   if (showIntro) {
     return (
